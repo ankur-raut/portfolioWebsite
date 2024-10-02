@@ -140,6 +140,28 @@ h6 {
   transform: scale(1.05);
 }
 
+/* Responsive design */
+
+/* For tablets or medium devices (e.g., 768px and below) */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+  }
+  .tile img {
+      max-width: 80px; /* Smaller images on medium screens */
+  }
+}
+
+/* For mobile devices (e.g., 480px and below) */
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr; /* 1 column for small screens */
+  }
+  .tile img {
+      max-width: 60px; /* Even smaller images on small screens */
+  }
+}
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -996,6 +1018,32 @@ section,
   height: 100px;
   margin-bottom: 10px;
 }
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .projects {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+      grid-template-columns: 1fr; /* 1 column for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .project-tile {
+      padding: 15px; /* Reduce padding for small screens */
+  }
+
+  h2 {
+      font-size: 16px; /* Reduce title font size */
+  }
+
+  p {
+      font-size: 13px; /* Reduce description font size */
+  }
+}
 
 /* h2 {
   font-size: 18px;
@@ -1050,6 +1098,50 @@ p {
 .achievements-description {
   font-size: 16px;
   color: rgb(255, 255, 255);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .achievements-item {
+      grid-template-columns: 1fr 1fr; /* Make the columns more balanced on medium-sized screens */
+  }
+
+  .achievements-title {
+      font-size: 32px; /* Adjust title size */
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-item {
+      grid-template-columns: 1fr; /* Single-column layout for smaller screens */
+  }
+
+  .achievements-image img {
+      width: 100%; /* Make image full-width in single-column layout */
+      max-width: 100%;
+  }
+
+  .achievements-title {
+      font-size: 28px; /* Adjust title size for smaller screens */
+  }
+
+  .achievements-description {
+      font-size: 14px; /* Adjust description font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-item {
+      padding: 5px;
+  }
+
+  .achievements-title {
+      font-size: 24px; /* Smaller title for mobile */
+  }
+
+  .achievements-description {
+      font-size: 12px; /* Smaller text on mobile */
+  }
 }
 
 /* achievents */
